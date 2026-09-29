@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Personal Website</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="island-wrapper">
+            <div class="dynamic-island" id="dynamic-island">
+                <!-- 1. Compact View (Pill State) -->
+                <div class="island-compact">
+                    <span class="island-status-dot"></span>
+                    <span class="island-title"></span>
+                    <span class="island-soundwave"> <span></span><span></span><span></span> </span>
+                </div>
+
+                <!-- 2. Expanded View (Both Nav Links & Player) -->
+                <div class="island-expanded">
+                    <!-- Row 1: Site Navigation Links -->
+                    <div class="island-nav-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#soon">Soon</a>
+                    </div>
+
+                    <hr class="island-divider" />
+
+                    <!-- Row 2: Media Player & Volume Slider -->
+                    <div class="island-player-area">
+                        <div class="island-track-info">
+                            <img src="./gojo.jpg" alt="Cover" class="island-album-art" />
+                            <div class="track-meta">
+                                <h4 class="track-title">Animals x Starboy</h4>
+                                <p class="track-artist">print("Favorite Song")</p>
+                            </div>
+                            <button id="music-btn" class="island-ctrl-btn" type="button" aria-label="Toggle playback">
+                                <span class="music-icon">▶</span>
+                            </button>
+                        </div>
+
+                        <div class="island-volume-control">
+                            <span class="vol-icon">|</span>
+                            <input
+                                type="range"
+                                id="volume-slider"
+                                min="0"
+                                max="1"
+                                step="0.05"
+                                value="0.25"
+                                class="vol-slider"
+                            />
+                            <span class="vol-icon">||</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <audio id="bg-audio" loop src="./Music/Animals x Starboy.mp3"></audio>
+
+        <!--Header-->
+        <header id="home" class="hero-section">
+            <div class="container hero-content">
+                <img src="./pfp.jpg" class="img-fluid pfp" alt="pfp/reze" />
+                <div class="hero-text">
+                    <h1>PERSONAL WEBSITE</h1>
+                    <p class="hero-desc">
+                        Here you'll find some random stuff that I put, since I dont know what to put bruh. Maybe ill put
+                        some series watchlist, trading playbook, portofolio, and some stuff.
+                    </p>
+                    <span class="hero-desc">inspired by ryoku.</span>
+                </div>
+            </div>
+        </header>
+
+        <!--Main Section-->
+        <!--About Me-->
+        <main>
+            <section id="about" class="about-section">
+                <div class="container about-container">
+                    <img class="img-fluid about-image" src="./gojo.jpg" alt="gojo" />
+                    <div class="about-bio">
+                        <h2 class="about-title">About Me</h2>
+                        <p class="about-text">
+                            I'm currently learning HTML, CSS, and Javascript. Im just learning for fun since life has
+                            been pretty boring lately. My original intention was to learn javascript for university
+                            purposes since im studying Blockchain, but learning HTML and CSS before Javascript is
+                            necessary apparently.
+                        </p>
+                        <p class="about-text">
+                            I dont know what to make, so im just putting random stuff here. I plan to make more websites
+                            in the futre, but I lack inspiration for the content and design.
+                        </p>
+                        <p class="about-text">
+                            I'll list down what my tech stack (no clue what that is), at least stuff i've learned this
+                            week:
+                        </p>
+                        <div class="tech-stack">
+                            <span class="custom-badges">HTML</span>
+                            <span class="custom-badges">CSS</span>
+                            <span class="custom-badges">FLEXBOX</span>
+                            <span class="custom-badges">RESPONSIVE</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Skill Section-->
+            <section id="skills" class="skills-master-header-section">
+                <div class="skills-master-container">
+                    <h2 class="main-skills-title">SKILLS</h2>
+                </div>
+            </section>
+            <section id="technical-analysis" class="skills-editorial-section">
+                <div class="editorial-container">
+                    <!-- Editorial Header Block -->
+                    <header class="editorial-header">
+                        <span class="vertical-tag">CHARTING</span>
+                        <div class="editorial-title-group">
+                            <h2 class="editorial-heading">Technical Analysis</h2>
+                            <p class="editorial-desc">One of my recent skill that I've been working on.</p>
+                        </div>
+                    </header>
+
+                    <!-- Asymmetric Media Grid -->
+                    <div class="editorial-grid">
+                        <!-- Item 01 (Left Top) -->
+                        <article class="gallery-item item-featured">
+                            <div class="gallery-media-wrapper">
+                                <img src="./LITUSDT4H.png" alt="LIT/USDT 4H ORDER BLOCK" class="gallery-img" />
+                            </div>
+                            <div class="gallery-meta">
+                                <span class="meta-tag">01 // ORDER BLOCK</span>
+                                <span class="meta-sub">LIT/USDT • 4H HTF BIAS</span>
+                            </div>
+                        </article>
+
+                        <!-- Item 02 (Right Top) -->
+                        <article class="gallery-item">
+                            <div class="gallery-media-wrapper">
+                                <img src="./BTCUSDTFVG.png" alt="FVG Daily" class="gallery-img" />
+                            </div>
+                            <div class="gallery-meta">
+                                <span class="meta-tag">02 // FAIR VALUE GAP</span>
+                                <span class="meta-sub">BTC/USDT • DAILY TF</span>
+                            </div>
+                        </article>
+
+                        <!-- Item 03 (Left Bottom) -->
+                        <article class="gallery-item">
+                            <div class="gallery-media-wrapper">
+                                <img src="./BTCUSDDSS.png" alt="DSS BRESSERT" class="gallery-img" />
+                            </div>
+                            <div class="gallery-meta">
+                                <span class="meta-tag">03 // DSS BRESSERT</span>
+                                <span class="meta-sub">BTC/USDT • WEEKLY TF TRIGGER</span>
+                            </div>
+                        </article>
+
+                        <!--Indicator Spec Block-->
+                        <aside class="indicator-spec-box">
+                            <div class="spec-header">
+                                <span class="spec-index">// CORE CONFLUENCE</span>
+                                <h4 class="spec-title">Execution Rules</h4>
+                            </div>
+
+                            <ul class="spec-list">
+                                <li class="spec-item">
+                                    <span class="spec-num">01</span>
+                                    <div class="spec-detail">
+                                        <span class="spec-name">ORDER BLOCK</span>
+                                        <span class="spec-desc"
+                                            >Institutional footprint & high-probability retest zone.</span
+                                        >
+                                    </div>
+                                </li>
+                                <li class="spec-item">
+                                    <span class="spec-num">02</span>
+                                    <div class="spec-detail">
+                                        <span class="spec-name">FAIR VALUE GAP (FVG)</span>
+                                        <span class="spec-desc">Imbalance fill & liquidity draw target.</span>
+                                    </div>
+                                </li>
+                                <li class="spec-item">
+                                    <span class="spec-num">03</span>
+                                    <div class="spec-detail">
+                                        <span class="spec-name">DSS BRESSERT</span>
+                                        <span class="spec-desc">Double Smoothed Stochastics for market shift.</span>
+                                    </div>
+                                </li>
+                                <li class="spec-item">
+                                    <span class="spec-num">04</span>
+                                    <div class="spec-detail">
+                                        <span class="spec-name">FIBONACCI</span>
+                                        <span class="spec-desc">0.31 - 0.618 Optimal Trade Entry (OTE) alignment.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </aside>
+
+                        <!-- Item 04 (Full width banner on bottom) -->
+                        <article class="gallery-item item-wide">
+                            <div class="gallery-media-wrapper">
+                                <img src="./ETHUSDTFIBO.png" alt="ETH WEEKLY FIBO" class="gallery-img" />
+                            </div>
+                            <div class="gallery-meta">
+                                <span class="meta-tag">04 // FIBONACCI RETRACEMENT</span>
+                                <span class="meta-sub">WEEKLY FIBONACCI</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!--Editing Skill-->
+            <!-- Editing Skills Showcase -->
+            <section id="editing" class="alternating-editorial-section">
+                <div class="editorial-flow-container">
+                    <div class="flow-indicator-bar">
+                        <h2 class="indicator-glyph"></h2>
+                        <h2 class="indicator-name">MOTION</h2>
+                        <h2 class="indicator-line"></h2>
+                        <h2 class="indicator-name">VISUAL ART</h2>
+                        <h2 class="indicator-glyph"></h2>
+                    </div>
+                    <!-- ROW 1: Landscape Video Carousel (16:9) Left, Statement Right -->
+                    <div class="editorial-duo-row row-landscape">
+                        <!-- Landscape Viewfinder Carousel -->
+                        <div class="viewfinder-wrapper viewfinder-landscape">
+                            <div class="viewfinder-corners">
+                                <span class="corner tl">+</span>
+                                <span class="corner tr">+</span>
+                                <span class="corner bl">+</span>
+                                <span class="corner br">+</span>
+                            </div>
+
+                            <div id="motionCarousel" class="carousel slide media-inner" data-bs-ride="false">
+                                <div class="carousel-inner h-100">
+                                    <!-- Slide 1 -->
+                                    <div class="carousel-item active h-100">
+                                        <video class="editorial-media" autoplay loop muted playsinline>
+                                            <source src="./AMV3D2.mp4" type="video/mp4" />
+                                        </video>
+                                        <span class="carousel-clip-badge">3D Anime Music Video</span>
+                                    </div>
+
+                                    <!-- Slide 2 -->
+                                    <div class="carousel-item h-100">
+                                        <video class="editorial-media" autoplay loop muted playsinline>
+                                            <source src="./AMV3D.mp4" type="video/mp4" />
+                                        </video>
+                                        <span class="carousel-clip-badge">3D Anime Music Video</span>
+                                    </div>
+                                </div>
+
+                                <!-- Slide Controls -->
+                                <button
+                                    class="carousel-control-prev carousel-viewfinder-btn"
+                                    type="button"
+                                    data-bs-target="#motionCarousel"
+                                    data-bs-slide="prev"
+                                    aria-label="Previous Slide"
+                                >
+                                    <span class="arrow-char">‹</span>
+                                </button>
+                                <button
+                                    class="carousel-control-next carousel-viewfinder-btn"
+                                    type="button"
+                                    data-bs-target="#motionCarousel"
+                                    data-bs-slide="next"
+                                    aria-label="Next Slide"
+                                >
+                                    <span class="arrow-char">›</span>
+                                </button>
+
+                                <!-- Indicators -->
+                                <div class="carousel-indicators viewfinder-dots">
+                                    <button
+                                        type="button"
+                                        data-bs-target="#motionCarousel"
+                                        data-bs-slide-to="0"
+                                        class="active"
+                                        aria-current="true"
+                                    ></button>
+                                    <button
+                                        type="button"
+                                        data-bs-target="#motionCarousel"
+                                        data-bs-slide-to="1"
+                                    ></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Statement Right -->
+                        <div class="editorial-narrative">
+                            <span class="narrative-index">01 // VIDEO EDITING</span>
+                            <h3 class="narrative-heading">Motion.</h3>
+                            <p class="narrative-body">
+                                Full-canvas compositions, wide-angle lens simulations, and multi-track velocity ramping.
+                                Engineered for high-res displays, trailers, and narrative flow.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ROW 2: Statement Left, Portrait Video Carousel (9:16) Right -->
+                    <div class="editorial-duo-row row-portrait">
+                        <!-- Statement Left -->
+                        <div class="editorial-narrative">
+                            <span class="narrative-index">02 // ILLUSTRATION</span>
+                            <h3 class="narrative-heading">Visual Art.</h3>
+                            <p class="narrative-body">
+                                Vertical-first pacing, rapid eye-tracking hooks, and localized glow shaders built
+                                specifically for mobile viewports, TikTok, and social reels.
+                            </p>
+                        </div>
+
+                        <!-- Portrait Viewfinder Carousel -->
+                        <div class="viewfinder-wrapper viewfinder-portrait">
+                            <div class="viewfinder-corners">
+                                <span class="corner tl">+</span>
+                                <span class="corner tr">+</span>
+                                <span class="corner bl">+</span>
+                                <span class="corner br">+</span>
+                            </div>
+
+                            <div id="aestheticCarousel" class="carousel slide media-inner" data-bs-ride="false">
+                                <div class="carousel-inner h-100">
+                                    <!-- Slide 1 -->
+                                    <div class="carousel-item active h-100">
+                                        <img src="./2dart.jpg" class="editorial-media" />
+                                        <span class="carousel-clip-badge">Traditional Art</span>
+                                    </div>
+
+                                    <!-- Slide 2 -->
+                                    <div class="carousel-item h-100">
+                                        <img src="./IMG_1432.PNG" class="editorial-media" />
+                                        <span class="carousel-clip-badge">Digital Art</span>
+                                    </div>
+                                </div>
+
+                                <!-- Slide Controls -->
+                                <button
+                                    class="carousel-control-prev carousel-viewfinder-btn"
+                                    type="button"
+                                    data-bs-target="#aestheticCarousel"
+                                    data-bs-slide="prev"
+                                    aria-label="Previous Slide"
+                                >
+                                    <span class="arrow-char">‹</span>
+                                </button>
+                                <button
+                                    class="carousel-control-next carousel-viewfinder-btn"
+                                    type="button"
+                                    data-bs-target="#aestheticCarousel"
+                                    data-bs-slide="next"
+                                    aria-label="Next Slide"
+                                >
+                                    <span class="arrow-char">›</span>
+                                </button>
+
+                                <!-- Indicators -->
+                                <div class="carousel-indicators viewfinder-dots">
+                                    <button
+                                        type="button"
+                                        data-bs-target="#aestheticCarousel"
+                                        data-bs-slide-to="0"
+                                        class="active"
+                                        aria-current="true"
+                                    ></button>
+                                    <button
+                                        type="button"
+                                        data-bs-target="#aestheticCarousel"
+                                        data-bs-slide-to="1"
+                                    ></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--FINAL-->
+            <section id="arsenal" class="arsenal-section">
+                <div class="arsenal-container">
+                    <!-- Technical Viewfinder Header -->
+                    <header class="arsenal-header">
+                        <div class="arsenal-index-tag">03 // STACK & WORKFLOW</div>
+                        <h2 class="arsenal-title">Arsenal.</h2>
+                    </header>
+
+                    <!-- 3D WebGL Canvas Viewport -->
+                    <div class="webgl-canvas-viewport">
+                        <canvas id="arsenal-canvas"></canvas>
+                        <div class="viewport-hints">
+                            <span>[MOUSE // INTERACTIVE ORBIT]</span>
+                            <span>[REAL-TIME // PHYSICAL GLASS TRANSMISSION]</span>
+                        </div>
+                    </div>
+
+                    <!-- Technical Specification Matrix -->
+                    <div class="arsenal-spec-matrix">
+                        <div class="spec-cell">
+                            <span class="spec-cell-title">After Effects</span>
+                            <p class="spec-cell-desc">Compositing, 3D Camera Tracker, Velocity Ramping, Glow Shaders</p>
+                            <div class="spec-meta">ROLE: MOTION // REELS</div>
+                        </div>
+
+                        <div class="spec-cell">
+                            <span class="spec-cell-title">Blender 3D</span>
+                            <p class="spec-cell-desc">
+                                Hard-surface Modeling, Camera Projection, Raytraced Lighting Passes
+                            </p>
+                            <div class="spec-meta">ROLE: SPATIAL // ASSETS</div>
+                        </div>
+
+                        <div class="spec-cell">
+                            <span class="spec-cell-title">HTML5 & CSS3</span>
+                            <p class="spec-cell-desc">CSS Grid, Subgrid, Custom Aspect Ratios, Viewfinder UI Systems</p>
+                            <div class="spec-meta">ROLE: LAYOUT // CORE</div>
+                        </div>
+
+                        <div class="spec-cell">
+                            <span class="spec-cell-title">JavaScript</span>
+                            <p class="spec-cell-desc">ES6+, DOM Manipulation, WebGL / Three.js Pipelines, Async APIs</p>
+                            <div class="spec-meta">ROLE: LOGIC // INTERACTIVE</div>
+                        </div>
+
+                        <div class="spec-cell">
+                            <span class="spec-cell-title">TradingView / Pine</span>
+                            <p class="spec-cell-desc">Custom Indicators, HTF Market Structure Mapping, Backtesting</p>
+                            <div class="spec-meta">ROLE: QUANT // ALGORITHMIC</div>
+                        </div>
+
+                        <div class="spec-cell">
+                            <span class="spec-cell-title">Integrated Pipeline</span>
+                            <p class="spec-cell-desc">AE & Blender workflows synced with modern web-native frontend</p>
+                            <div class="spec-meta">ROLE: ARCHITECTURE</div>
+                        </div>
+                    </div>
+
+                    <!-- Closing Footer / Collaboration -->
+                    <footer class="arsenal-footer-contact">
+                        <h3 class="footer-callout">Let's work together.</h3>
+
+                        <div class="footer-channels">
+                            <a href="#" class="channel-link">[DISCORD]</a>
+                            <a href="#" class="channel-link">[X / TWITTER]</a>
+                            <a href="#" class="channel-link">[YOUTUBE]</a>
+                            <a href="#" class="channel-link">[GITHUB]</a>
+                        </div>
+
+                        <div class="footer-footnote">[SYSTEM // 2026 ARCHIVE • PRECISELY BUILT]</div>
+                    </footer>
+                </div>
+            </section>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/SVGLoader.js"></script>
+        <script src="./arsenal.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            const audio = document.getElementById("bg-audio");
+            const island = document.getElementById("dynamic-island");
+            const musicBtn = document.getElementById("music-btn");
+            const musicIcon = musicBtn.querySelector(".music-icon");
+            const volumeSlider = document.getElementById("volume-slider");
+
+            // Set default volume
+            audio.volume = parseFloat(volumeSlider.value);
+
+            musicBtn.addEventListener("click", e => {
+                e.stopPropagation();
+
+                if (audio.paused) {
+                    audio.play();
+                    island.classList.add("playing");
+                    musicIcon.textContent = "⏸";
+                } else {
+                    audio.pause();
+                    island.classList.remove("playing");
+                    musicIcon.textContent = "▶";
+                }
+            });
+
+            // Update volume on slider change
+            volumeSlider.addEventListener("input", e => {
+                audio.volume = e.target.value;
+            });
+
+            // Prevent clicking the slider from triggering link navigations or unwanted click states
+            volumeSlider.addEventListener("click", e => e.stopPropagation());
+        </script>
+    </body>
+</html>
